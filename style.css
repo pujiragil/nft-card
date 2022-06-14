@@ -19,6 +19,7 @@ body {
 }
 
 .card {
+    scale: 1.2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,6 +57,7 @@ body {
     box-shadow: 2px 2px 20px 20px #0C1729;
     border-radius: 14px;
     width: 375px;
+    height: auto;
 }
 
 .card__img--container {
@@ -81,7 +83,7 @@ body {
 
 .img__link::after {
     content: url('./images/icon-view.svg');
-    background-color: hsla(178, 100%, 50%, 0.600);
+    background-color: hsla(178, 100%, 50%, 0.500);
     display: flex;
     position: absolute;
     padding: 143px;
@@ -211,5 +213,14 @@ body {
 @media screen and (max-width: 968px) {
     .card {
         height: 100vh;
+        scale: 1;
+        width: 90vw;
+    }
+
+}
+
+@media screen and (max-width: 496px) {
+    .card {
+        scale: 0.9;
     }
 }
