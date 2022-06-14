@@ -25,7 +25,6 @@ body {
     background-color: #0D1A2D;
     margin: 0 auto;
     height: 100vh;
-    /* height: 100%; */
 }
 
 .card__container {
@@ -41,11 +40,8 @@ body {
 .card__wrapper {
     background-color: #0C192C;
     box-shadow: 1px 2px 20px 20px #0C1729;
-
     display: flex;
     flex-direction: column;
-    /* width: 500px; */
-    /* height: 100vh; */
     border-radius: 20px;
     justify-content: center;
     align-items: center;
@@ -59,7 +55,7 @@ body {
     background-color: #15273F;
     box-shadow: 2px 2px 20px 20px #0C1729;
     border-radius: 14px;
-    width: 300px;
+    width: 375px;
 }
 
 .card__img--container {
@@ -70,42 +66,30 @@ body {
     width: 100%;
     position: relative;
     justify-content: center;
-    /* transition: all 0.5s ease-in-out; */
 }
-.card__img--container::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: hsl(178, 100%, 50%);
-    width: 260px;
-    opacity: 0.5;
-    height: 260px;
+
+.img__link {
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-color: aqua;
+    align-items: center;
+    justify-content: center;
     border-radius: 6px;
-    z-index: 0;
-    transition: all 0.5s ease-in-out;
 }
 
-.card__img--container::after {
+.img__link::after {
     content: url('./images/icon-view.svg');
+    background-color: hsla(178, 100%, 50%, 0.600);
+    display: flex;
     position: absolute;
-    opacity: 1;
-    z-index: 0;
-    transition: all 0.5s ease-in-out;
+    padding: 143px;
+    border-radius: 6px;
 }
 
-.card__img--container:hover::after {
-    z-index: 4;
-    cursor: pointer;
-    /* transition: all 0.5s ease-in-out; */
-    opacity: 1;
-}
-
-.card__img--container:hover::before {
-    z-index: 4;
-    opacity: .5;
-    cursor: pointer;
-    /* transition: all 0.5s ease-in-out; */
+.img__link:hover:after {
+    z-index: 2;
 }
 
 #main-img {
@@ -114,7 +98,7 @@ body {
     border-radius: 5px;
     position: relative;
     opacity: 1;
-    z-index: 2;
+    z-index: 1;
 }
 
 .card__text {
